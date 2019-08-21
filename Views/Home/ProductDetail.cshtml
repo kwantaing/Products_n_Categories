@@ -1,0 +1,29 @@
+@model Product
+<link rel="stylesheet" href="~/css/style.css">
+<div class="text-center">
+    <h1 class="display-5">@Model.name</h1>
+</div>
+<div class="main">
+    <div class="categories text-center">
+        <h3 class="display-5">Categories:</h3><br>
+        @foreach(var association in @Model.Associations)
+        {
+            <p>- @association.category.name</p>
+        }
+    </div>
+    <div class="addCategory text-center">
+        <h3 class="display-5">Add Category:</h3><br>
+        <form asp-action="addCategorytoProduct" controller="Home" method="post">
+            <input type="hidden" name="product_id" value="@Model.product_id">
+            <select class="form-control" name="category_id">
+                @foreach(var category in ViewBag.categories)
+                {
+                    <option value="@category.category_id">@category.name</option>
+                }
+            </select><br>
+            <button class="btn btn-primary">Add</button>
+
+        </form>
+
+    </div>
+</div>

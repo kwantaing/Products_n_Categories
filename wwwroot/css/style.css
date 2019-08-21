@@ -1,0 +1,53 @@
+.main{
+    width:100%;
+    height:750px;
+}
+.new{
+    width:48.6%;
+    padding: 2%;
+    border-right:2px solid gray;
+    height:100%;
+    display:inline-block;
+    vertical-align: top;
+}
+.new form{
+    width: 80%;
+    text-align:center;
+    display:inline-block;
+}
+.existing{
+    width:48.6%;
+    height:100%;
+    padding:2%;
+    display:inline-block;
+    font-size: 20px;
+}
+.main .newCategory{
+    margin-top:20%;
+}
+.error{
+    color:red;
+}
+.categories, .products{
+    border-right: 2px solid gray;
+    width:48.6%;
+    padding: 2%;
+    height:100%;
+    display:inline-block;
+    vertical-align: top;
+}
+.addCategory, .addProduct{
+    display:inline-block;
+    width:48.6%;
+    padding:2%;
+}
+.categories p {
+    margin-left: 40%;
+    text-align:left;
+}
+.addCategory form, .addProduct form{
+    width:80%;
+    text-align:center;
+    display:inline-block;
+
+}
